@@ -9,10 +9,13 @@ Free-ranging cats can cause serious damage to the ecosystem as they have been in
 
 Although there is no prior work done on the animal shelter outcomes of specifically shelter cats, there have been classification models done to predict the outcome of shelter animals. Danielle’s work aimed to predict an animal’s outcome from the shelter based on their breed, color, sex, and age using random forests classifier to predict the outcome of the animal. Although her model had an f-1 score of 0.73, her model would incorrectly classify “adoption” as “return to owner” and would misclassify the outcomes of popular breeds as “transfer” or “death” when the true value was “euthanasia” [3]. In Mohammad’s work, it also aims to predict the outcomes of animals in animal shelters by using a decision tree classifier [4]. For our project, instead of predicting the outcomes of animals, we will predict the likelihood of a cat being adopted based on their attributes.
 
-[1] https://www.fws.gov/sites/default/files/documents/keep-cats-indoors.pdf
-[2] https://www.aspca.org/helping-people-pets/shelter-intake-and-surrender/pet-statistics
-[3] https://github.com/danielle-altshuler/shelter_animal_predictions
-[3] https://github.com/mushahidq/animal_shelter_outcome_prediction/tree/main
+[1]https://www.fws.gov/sites/default/files/documents/keep-cats-indoors.pdf
+
+[2]https://www.aspca.org/helping-people-pets/shelter-intake-and-surrender/pet-statistics
+
+[3]https://github.com/danielle-altshuler/shelter_animal_predictions
+
+[4]https://github.com/mushahidq/animal_shelter_outcome_prediction/tree/main
 
 ## Problem Statement
 The goal of this project is to forecast the possibility of cat adoption from shelters. Using parameters including primary color, sex, intake conditions, intake kinds, reasons for intake, outcome types, outcome subtypes, and indications for intake and outcome mortality, the goal is to create a model that can reliably categorize cats as either likely to be adopted or not.
