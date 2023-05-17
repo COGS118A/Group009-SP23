@@ -79,10 +79,7 @@ In terms of ethics and privacy concerns, there should not be many obvious ethica
 | __Date__    | __Time__ | __Completed before meeting__    | __Discuss at meeting__ |
 | -------- | ------- |------- |------- |
 | 5/15 | 8PM | Finding ideas, datasets for the project (All) | Which subject we’re going with, dividing the tasks for the proposal,  draft project proposal |
-| 5/16 | 5PM | Abstract, Project Timeline Proposal & Problem statement (Thaïs)
-Data, Team Expectations & Proposed Solution (Veeraj)
-Background, Ethics & Privacy (Ezra)
-Evaluation Metrics (Colin) | Review/Edit/Talk about our parts and what we need to each change |
+| 5/16 | 5PM | Divide up tasks for Project proposal and complete parts separately | Review/Edit/Talk about our parts and what we need to each change |
 | 5/17 | Deadline Project Proposal |
 | 5/19 | 3PM | Import & Wrangle Data (Undetermined) | Discuss Analysis Plan, split tasks |
 | 5/23 | 5PM | Start project code according to tasks (All) | Discuss progress & changes if needed |
