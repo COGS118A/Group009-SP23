@@ -33,9 +33,9 @@ For our project, we will be employing a subset of the City of Long Beach's Anima
 
 ## Proposed Solution
 
-The primary function of our model will be to use various features (such as primary color, sex, intake conditions, intake types, reasons for intake, outcome types, outcome subtypes, and indications for intake and outcome mortality) to predict a binary outcome: whether a cat is likely to have a good outcome (adoption, return to owner etc) or a bad outcome (euthanasia, transfer etc). The outcomes have various different categories, but can be simplified into a good or bad binary.
+The primary function of our model will be to use various features (such as primary color, sex, intake conditions, intake types, reasons for intake, outcome types, outcome subtypes, and indications for intake and outcome mortality) to __predict a binary outcome__: whether a cat is likely to have a good outcome (adoption, return to owner etc) or a bad outcome (euthanasia, transfer etc). The outcomes have various different categories, but can be simplified into a good or bad binary.
 
-As for a benchmark model, we will start with a simple logistic regression model given its interpretability and suitability for binary classification tasks. This model will provide a baseline against which we can compare the performance of more complex models. If other models do not significantly outperform the logistic regression model, its simplicity and interpretability might make it the preferred choice.
+As for a benchmark model, we will start with a simple __logistic regression__ model given its interpretability and suitability for binary classification tasks. This model will provide a baseline against which we can compare the performance of more complex models. If other models do not significantly outperform the logistic regression model, its simplicity and interpretability might make it the preferred choice.
 
 To ensure the model's applicability, we'll preprocess the data by one-hot encoding categorical variables like age, intake type, outcome type, and reason for intake. This conversion of categorical data into a format that can be provided to machine learning algorithms will ensure our model can utilize all available information.
 
@@ -46,20 +46,22 @@ The implementation of the solution will be done in Python, using libraries like 
 
 The primary evaluation metric we intend to use is the Receiver Operating Characteristic for Area Under the Curve (ROC-AUC, or AUC for short) metric. We decided to go with this metric because it works well with the algorithm that we have decided to use (logistic regression). AUC is appropriate for logit because it allows us to determine how well the model correctly predicts classes. While our project's issue is essential, it isn't as dire as other machine learning projects like cancer testing. Indicating that a cat won't get adopted when it actually will is a pleasant surprise instead of a life-or-death situation. Therefore, we have more leeway regarding classification levels and don't have to worry about the severity of picking something like a false negative over a false positive. ROC AUC compares the false classification rates at all classification thresholds, making it ideal for a model that isn't making high-stakes predictions. It also allows us to change the classification rate without significant concern for the consequences of false predictions. The ROC AUC curve compares the true positive rate (recall) to the false positive rate (1-specificity). We calculate these as follows:
 
-Recall = true positives/(true positives + false negatives)
+__Recall = true positives/(true positives + false negatives)__
 
-Specificity = true negatives/(true negatives + false positives)
+__Specificity = true negatives/(true negatives + false positives)__
 
 The greater the area under the curve (AUC), the better the model distinguishes between the two classes. The best possible "AOC" would be a value of 1, indicating that the model can perfectly differentiate the two classes. The worst possible "AOC" we can have is 0.5, meaning that the model cannot distinguish the two classes and therefore predicts by chance. To plot this curve, we use different classification thresholds and find the TPR and FPR based on those thresholds. We then plot the TPR and FPR on the x and y axes. 
 
 We also plan to use the F-score metric. The F-score is appropriate for this model because it is another way of indicating its performance concerning the bias-variance tradeoff. The F-score shows a weighted average of the precision and recall scores, giving us a metric that favors a balance between the two. The F-score will be lower if the precision or recall is higher than the other metric. We calculate precision using the following formula:
 
-Precision = true positives/(true positives + false positives)
+__Precision = true positives/(true positives + false positives)__
 
 The F score is calculated by using the following formula:
 
-F-score = 2 * (precision * recall) / (precision + recall)
-Ethics & Privacy (Ezra)
+__F-score = 2 * (precision * recall) / (precision + recall)__
+
+## Ethics & Privacy
+
 In terms of ethics and privacy concerns, there should not be many obvious ethical implications since the data collected is not on human subjects. However, there is an issue of privacy with the data as the Long Beach animal shelter has a record of where the cats were taken from. This may be a privacy issue because the addresses of owners who have chosen to surrender their cat are published in the dataset and it is unknown to us if this data was collected with the owners’ permission. This is especially a concern if the cat was taken due to mistreatment and/or abuse as animal abusers can possibly be tracked down and harassed with this data. However, we do not plan on using any locational data in our model so it should not be an issue. 
 
 ## Team Expectations
@@ -74,54 +76,7 @@ In terms of ethics and privacy concerns, there should not be many obvious ethica
 ## Project Timeline Proposal
 
 
-Date
-Time
-Completed before meeting
-Discuss at meeting
-5/15
-8PM
-Finding ideas, datasets for the project (All)
-Which subject we’re going with, dividing the tasks for the proposal,  draft project proposal
-5/16
-5PM
-Abstract, Project Timeline Proposal & Problem statement (Thaïs)
-Data, Team Expectations & Proposed Solution (Veeraj)
-Background, Ethics & Privacy (Ezra)
-Evaluation Metrics (Colin)
-Review/Edit/Talk about our parts and what we need to each change
-5/17
-Deadline Project Proposal
-5/19
-3PM
-Import & Wrangle Data (Undetermined)
-Discuss Analysis Plan, split tasks
-5/23
-5PM
-Start project code according to tasks (All)
-Discuss progress & changes if needed
-5/26
-3PM
-Read the peer reviews and change according to previous Project Proposal tasks (Everyone)
-Discuss progress & changes if needed
-5/30
-5PM
-Finish tasks (Everyone)
-Finalizing details before deadline
-5/31
-Deadline Checkpoint
-6/6
-5PM
-Complete analysis
-Draft results/conclusion/discussion, split tasks
-6/13
-5PM
-Study results 
-Complete project
-6/14
-Deadline Final Project
-
-
-| Date    | Time | Completed before meeting    | Discuss at meeting |
+| __Date__    | __Time__ | __Completed before meeting__    | __Discuss at meeting__ |
 | -------- | ------- |------- |------- |
 | 5/15 | 8PM | Finding ideas, datasets for the project (All) | Which subject we’re going with, dividing the tasks for the proposal,  draft project proposal |
 | 5/16 | 5PM | Abstract, Project Timeline Proposal & Problem statement (Thaïs)
